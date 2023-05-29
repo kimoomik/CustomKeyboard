@@ -17,6 +17,16 @@
 		CA2497C62A1B9F3D008BF443 /* MyKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2497C52A1B9F3D008BF443 /* MyKeyboardTests.swift */; };
 		CA2497D02A1B9F3D008BF443 /* MyKeyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2497CF2A1B9F3D008BF443 /* MyKeyboardUITests.swift */; };
 		CA2497D22A1B9F3D008BF443 /* MyKeyboardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2497D12A1B9F3D008BF443 /* MyKeyboardUITestsLaunchTests.swift */; };
+		CA2497E52A1B9F66008BF443 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2497E42A1B9F66008BF443 /* KeyboardViewController.swift */; };
+		CA2497E92A1B9F66008BF443 /* MyIosKeyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CA2497E22A1B9F66008BF443 /* MyIosKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CA2497EF2A1B9F86008BF443 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2497EE2A1B9F86008BF443 /* KeyboardView.swift */; };
+		CA2497F12A1BC17C008BF443 /* MyKeyBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2497F02A1BC17C008BF443 /* MyKeyBoard.storyboard */; };
+		CA24984F2A22A9AB008BF443 /* CustomKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24984E2A22A9AB008BF443 /* CustomKeyboardView.swift */; };
+		CA2498512A22A9C6008BF443 /* CustomKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2498502A22A9C6008BF443 /* CustomKeyboardView.xib */; };
+		CA2498542A22BC96008BF443 /* CustomKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24984E2A22A9AB008BF443 /* CustomKeyboardView.swift */; };
+		CA2498552A22BCA9008BF443 /* CustomKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2498502A22A9C6008BF443 /* CustomKeyboardView.xib */; };
+		CA2498562A22C839008BF443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2497B72A1B9F3D008BF443 /* Assets.xcassets */; };
+		CA2498582A24B2A7008BF443 /* EmojisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2498572A24B2A7008BF443 /* EmojisViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +44,28 @@
 			remoteGlobalIDString = CA2497A72A1B9F3A008BF443;
 			remoteInfo = MyKeyboard;
 		};
+		CA2497E72A1B9F66008BF443 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2497A02A1B9F3A008BF443 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA2497E12A1B9F66008BF443;
+			remoteInfo = MyIosKeyboard;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CA2497ED2A1B9F66008BF443 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CA2497E92A1B9F66008BF443 /* MyIosKeyboard.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CA2497A82A1B9F3A008BF443 /* MyKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +82,14 @@
 		CA2497CB2A1B9F3D008BF443 /* MyKeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyKeyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2497CF2A1B9F3D008BF443 /* MyKeyboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeyboardUITests.swift; sourceTree = "<group>"; };
 		CA2497D12A1B9F3D008BF443 /* MyKeyboardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeyboardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CA2497E22A1B9F66008BF443 /* MyIosKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyIosKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA2497E42A1B9F66008BF443 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		CA2497E62A1B9F66008BF443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA2497EE2A1B9F86008BF443 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		CA2497F02A1BC17C008BF443 /* MyKeyBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyKeyBoard.storyboard; sourceTree = "<group>"; };
+		CA24984E2A22A9AB008BF443 /* CustomKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboardView.swift; sourceTree = "<group>"; };
+		CA2498502A22A9C6008BF443 /* CustomKeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomKeyboardView.xib; sourceTree = "<group>"; };
+		CA2498572A24B2A7008BF443 /* EmojisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojisViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +114,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA2497DF2A1B9F66008BF443 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +130,7 @@
 				CA2497AA2A1B9F3A008BF443 /* MyKeyboard */,
 				CA2497C42A1B9F3D008BF443 /* MyKeyboardTests */,
 				CA2497CE2A1B9F3D008BF443 /* MyKeyboardUITests */,
+				CA2497E32A1B9F66008BF443 /* MyIosKeyboard */,
 				CA2497A92A1B9F3A008BF443 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +141,7 @@
 				CA2497A82A1B9F3A008BF443 /* MyKeyboard.app */,
 				CA2497C12A1B9F3D008BF443 /* MyKeyboardTests.xctest */,
 				CA2497CB2A1B9F3D008BF443 /* MyKeyboardUITests.xctest */,
+				CA2497E22A1B9F66008BF443 /* MyIosKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +178,20 @@
 			path = MyKeyboardUITests;
 			sourceTree = "<group>";
 		};
+		CA2497E32A1B9F66008BF443 /* MyIosKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CA2497E42A1B9F66008BF443 /* KeyboardViewController.swift */,
+				CA2497F02A1BC17C008BF443 /* MyKeyBoard.storyboard */,
+				CA2497E62A1B9F66008BF443 /* Info.plist */,
+				CA2497EE2A1B9F86008BF443 /* KeyboardView.swift */,
+				CA24984E2A22A9AB008BF443 /* CustomKeyboardView.swift */,
+				CA2498502A22A9C6008BF443 /* CustomKeyboardView.xib */,
+				CA2498572A24B2A7008BF443 /* EmojisViewController.swift */,
+			);
+			path = MyIosKeyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,10 +202,12 @@
 				CA2497A42A1B9F3A008BF443 /* Sources */,
 				CA2497A52A1B9F3A008BF443 /* Frameworks */,
 				CA2497A62A1B9F3A008BF443 /* Resources */,
+				CA2497ED2A1B9F66008BF443 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CA2497E82A1B9F66008BF443 /* PBXTargetDependency */,
 			);
 			name = MyKeyboard;
 			productName = MyKeyboard;
@@ -186,6 +250,23 @@
 			productReference = CA2497CB2A1B9F3D008BF443 /* MyKeyboardUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		CA2497E12A1B9F66008BF443 /* MyIosKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA2497EA2A1B9F66008BF443 /* Build configuration list for PBXNativeTarget "MyIosKeyboard" */;
+			buildPhases = (
+				CA2497DE2A1B9F66008BF443 /* Sources */,
+				CA2497DF2A1B9F66008BF443 /* Frameworks */,
+				CA2497E02A1B9F66008BF443 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyIosKeyboard;
+			productName = MyIosKeyboard;
+			productReference = CA2497E22A1B9F66008BF443 /* MyIosKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,6 +288,9 @@
 						CreatedOnToolsVersion = 14.0.1;
 						TestTargetID = CA2497A72A1B9F3A008BF443;
 					};
+					CA2497E12A1B9F66008BF443 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
 				};
 			};
 			buildConfigurationList = CA2497A32A1B9F3A008BF443 /* Build configuration list for PBXProject "MyKeyboard" */;
@@ -225,6 +309,7 @@
 				CA2497A72A1B9F3A008BF443 /* MyKeyboard */,
 				CA2497C02A1B9F3D008BF443 /* MyKeyboardTests */,
 				CA2497CA2A1B9F3D008BF443 /* MyKeyboardUITests */,
+				CA2497E12A1B9F66008BF443 /* MyIosKeyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +321,7 @@
 			files = (
 				CA2497BB2A1B9F3D008BF443 /* LaunchScreen.storyboard in Resources */,
 				CA2497B82A1B9F3D008BF443 /* Assets.xcassets in Resources */,
+				CA2498552A22BCA9008BF443 /* CustomKeyboardView.xib in Resources */,
 				CA2497B32A1B9F3A008BF443 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +340,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA2497E02A1B9F66008BF443 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA2498512A22A9C6008BF443 /* CustomKeyboardView.xib in Resources */,
+				CA2498562A22C839008BF443 /* Assets.xcassets in Resources */,
+				CA2497F12A1BC17C008BF443 /* MyKeyBoard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -265,6 +361,7 @@
 				CA2497AC2A1B9F3A008BF443 /* AppDelegate.swift in Sources */,
 				CA2497B62A1B9F3A008BF443 /* MyKeyboard.xcdatamodeld in Sources */,
 				CA2497AE2A1B9F3A008BF443 /* SceneDelegate.swift in Sources */,
+				CA2498542A22BC96008BF443 /* CustomKeyboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +382,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA2497DE2A1B9F66008BF443 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA2497E52A1B9F66008BF443 /* KeyboardViewController.swift in Sources */,
+				CA2497EF2A1B9F86008BF443 /* KeyboardView.swift in Sources */,
+				CA24984F2A22A9AB008BF443 /* CustomKeyboardView.swift in Sources */,
+				CA2498582A24B2A7008BF443 /* EmojisViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -297,6 +405,11 @@
 			isa = PBXTargetDependency;
 			target = CA2497A72A1B9F3A008BF443 /* MyKeyboard */;
 			targetProxy = CA2497CC2A1B9F3D008BF443 /* PBXContainerItemProxy */;
+		};
+		CA2497E82A1B9F66008BF443 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA2497E12A1B9F66008BF443 /* MyIosKeyboard */;
+			targetProxy = CA2497E72A1B9F66008BF443 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -437,15 +550,17 @@
 		CA2497D62A1B9F3D008BF443 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyKeyboard/MyKeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QB6986SXF2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyKeyboard/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -465,15 +580,17 @@
 		CA2497D72A1B9F3D008BF443 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyKeyboard/MyKeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QB6986SXF2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyKeyboard/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -566,6 +683,58 @@
 			};
 			name = Release;
 		};
+		CA2497EB2A1B9F66008BF443 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QB6986SXF2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyIosKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyIosKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keyboard.ios.MyKeyboard.MyIosKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA2497EC2A1B9F66008BF443 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QB6986SXF2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyIosKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyIosKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keyboard.ios.MyKeyboard.MyIosKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -601,6 +770,15 @@
 			buildConfigurations = (
 				CA2497DC2A1B9F3D008BF443 /* Debug */,
 				CA2497DD2A1B9F3D008BF443 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA2497EA2A1B9F66008BF443 /* Build configuration list for PBXNativeTarget "MyIosKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA2497EB2A1B9F66008BF443 /* Debug */,
+				CA2497EC2A1B9F66008BF443 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

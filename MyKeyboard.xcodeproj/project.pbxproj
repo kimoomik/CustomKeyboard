@@ -19,14 +19,17 @@
 		CA2497D22A1B9F3D008BF443 /* MyKeyboardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2497D12A1B9F3D008BF443 /* MyKeyboardUITestsLaunchTests.swift */; };
 		CA2497E52A1B9F66008BF443 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2497E42A1B9F66008BF443 /* KeyboardViewController.swift */; };
 		CA2497E92A1B9F66008BF443 /* MyIosKeyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CA2497E22A1B9F66008BF443 /* MyIosKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CA2497EF2A1B9F86008BF443 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2497EE2A1B9F86008BF443 /* KeyboardView.swift */; };
+		CA2497EF2A1B9F86008BF443 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2497EE2A1B9F86008BF443 /* Extension.swift */; };
 		CA2497F12A1BC17C008BF443 /* MyKeyBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2497F02A1BC17C008BF443 /* MyKeyBoard.storyboard */; };
-		CA24984F2A22A9AB008BF443 /* CustomKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24984E2A22A9AB008BF443 /* CustomKeyboardView.swift */; };
-		CA2498512A22A9C6008BF443 /* CustomKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2498502A22A9C6008BF443 /* CustomKeyboardView.xib */; };
-		CA2498542A22BC96008BF443 /* CustomKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24984E2A22A9AB008BF443 /* CustomKeyboardView.swift */; };
-		CA2498552A22BCA9008BF443 /* CustomKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2498502A22A9C6008BF443 /* CustomKeyboardView.xib */; };
+		CA24984F2A22A9AB008BF443 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24984E2A22A9AB008BF443 /* Model.swift */; };
 		CA2498562A22C839008BF443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2497B72A1B9F3D008BF443 /* Assets.xcassets */; };
 		CA2498582A24B2A7008BF443 /* EmojisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2498572A24B2A7008BF443 /* EmojisViewController.swift */; };
+		CA24985C2A2681CC008BF443 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24985B2A2681CC008BF443 /* SpeechRecognizer.swift */; };
+		CA24985E2A268220008BF443 /* MicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24985D2A268220008BF443 /* MicViewController.swift */; };
+		CA8B6D732A2B6C4100A8FF9E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA8B6D722A2B6C4100A8FF9E /* Settings.bundle */; };
+		CA8B6D752A2B73CB00A8FF9E /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B6D742A2B73CB00A8FF9E /* SettingsBundleHelper.swift */; };
+		CA8B6D772A2BEC7C00A8FF9E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B6D762A2BEC7C00A8FF9E /* SettingsViewController.swift */; };
+		CA8B6D7A2A2C019800A8FF9E /* suggestion.json in Resources */ = {isa = PBXBuildFile; fileRef = CA8B6D792A2C019800A8FF9E /* suggestion.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,11 +88,16 @@
 		CA2497E22A1B9F66008BF443 /* MyIosKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyIosKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2497E42A1B9F66008BF443 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		CA2497E62A1B9F66008BF443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA2497EE2A1B9F86008BF443 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		CA2497EE2A1B9F86008BF443 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CA2497F02A1BC17C008BF443 /* MyKeyBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyKeyBoard.storyboard; sourceTree = "<group>"; };
-		CA24984E2A22A9AB008BF443 /* CustomKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboardView.swift; sourceTree = "<group>"; };
-		CA2498502A22A9C6008BF443 /* CustomKeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomKeyboardView.xib; sourceTree = "<group>"; };
+		CA24984E2A22A9AB008BF443 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CA2498572A24B2A7008BF443 /* EmojisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojisViewController.swift; sourceTree = "<group>"; };
+		CA24985B2A2681CC008BF443 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		CA24985D2A268220008BF443 /* MicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicViewController.swift; sourceTree = "<group>"; };
+		CA8B6D722A2B6C4100A8FF9E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		CA8B6D742A2B73CB00A8FF9E /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
+		CA8B6D762A2BEC7C00A8FF9E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CA8B6D792A2C019800A8FF9E /* suggestion.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = suggestion.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,15 +189,44 @@
 		CA2497E32A1B9F66008BF443 /* MyIosKeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				CA2497E42A1B9F66008BF443 /* KeyboardViewController.swift */,
+				CA8B6D782A2C016D00A8FF9E /* Json */,
+				CA24985A2A267FF9008BF443 /* Tools */,
+				CA2498592A267FE5008BF443 /* ViewController */,
 				CA2497F02A1BC17C008BF443 /* MyKeyBoard.storyboard */,
 				CA2497E62A1B9F66008BF443 /* Info.plist */,
-				CA2497EE2A1B9F86008BF443 /* KeyboardView.swift */,
-				CA24984E2A22A9AB008BF443 /* CustomKeyboardView.swift */,
-				CA2498502A22A9C6008BF443 /* CustomKeyboardView.xib */,
-				CA2498572A24B2A7008BF443 /* EmojisViewController.swift */,
+				CA8B6D722A2B6C4100A8FF9E /* Settings.bundle */,
 			);
 			path = MyIosKeyboard;
+			sourceTree = "<group>";
+		};
+		CA2498592A267FE5008BF443 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CA2497E42A1B9F66008BF443 /* KeyboardViewController.swift */,
+				CA2498572A24B2A7008BF443 /* EmojisViewController.swift */,
+				CA24985D2A268220008BF443 /* MicViewController.swift */,
+				CA8B6D762A2BEC7C00A8FF9E /* SettingsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CA24985A2A267FF9008BF443 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CA2497EE2A1B9F86008BF443 /* Extension.swift */,
+				CA24984E2A22A9AB008BF443 /* Model.swift */,
+				CA24985B2A2681CC008BF443 /* SpeechRecognizer.swift */,
+				CA8B6D742A2B73CB00A8FF9E /* SettingsBundleHelper.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		CA8B6D782A2C016D00A8FF9E /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				CA8B6D792A2C019800A8FF9E /* suggestion.json */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,7 +358,6 @@
 			files = (
 				CA2497BB2A1B9F3D008BF443 /* LaunchScreen.storyboard in Resources */,
 				CA2497B82A1B9F3D008BF443 /* Assets.xcassets in Resources */,
-				CA2498552A22BCA9008BF443 /* CustomKeyboardView.xib in Resources */,
 				CA2497B32A1B9F3A008BF443 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,9 +380,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA2498512A22A9C6008BF443 /* CustomKeyboardView.xib in Resources */,
 				CA2498562A22C839008BF443 /* Assets.xcassets in Resources */,
+				CA8B6D732A2B6C4100A8FF9E /* Settings.bundle in Resources */,
 				CA2497F12A1BC17C008BF443 /* MyKeyBoard.storyboard in Resources */,
+				CA8B6D7A2A2C019800A8FF9E /* suggestion.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +398,6 @@
 				CA2497AC2A1B9F3A008BF443 /* AppDelegate.swift in Sources */,
 				CA2497B62A1B9F3A008BF443 /* MyKeyboard.xcdatamodeld in Sources */,
 				CA2497AE2A1B9F3A008BF443 /* SceneDelegate.swift in Sources */,
-				CA2498542A22BC96008BF443 /* CustomKeyboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,10 +422,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA8B6D752A2B73CB00A8FF9E /* SettingsBundleHelper.swift in Sources */,
+				CA24985C2A2681CC008BF443 /* SpeechRecognizer.swift in Sources */,
 				CA2497E52A1B9F66008BF443 /* KeyboardViewController.swift in Sources */,
-				CA2497EF2A1B9F86008BF443 /* KeyboardView.swift in Sources */,
-				CA24984F2A22A9AB008BF443 /* CustomKeyboardView.swift in Sources */,
+				CA24985E2A268220008BF443 /* MicViewController.swift in Sources */,
+				CA2497EF2A1B9F86008BF443 /* Extension.swift in Sources */,
+				CA24984F2A22A9AB008BF443 /* Model.swift in Sources */,
 				CA2498582A24B2A7008BF443 /* EmojisViewController.swift in Sources */,
+				CA8B6D772A2BEC7C00A8FF9E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

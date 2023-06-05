@@ -8,20 +8,24 @@
 import UIKit
 
 class EmojisViewController: UIInputViewController {
+
+    // MARK: - Outlets
     
     @IBOutlet private weak var collectionView: UICollectionView!
-    private var dataSource: EmojiDataSource!
     
-    private var proxy : UITextDocumentProxy {
-        return textDocumentProxy
-    }
+    // MARK: - Variables
+    
+    private var dataSource: EmojiDataSource!
+    weak var delegate: KeyboardViewControllerDelegate?
 
+    // MARK: - View Life Cycle Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = EmojiDataSource()
     }
     
+    // MARK: - Actions
     
     @IBAction func switchToLetters(_ sender: Any) {
         self.dismiss(animated: false)
@@ -29,10 +33,13 @@ class EmojisViewController: UIInputViewController {
     
     
     @IBAction func deleteText(_ sender: Any) {
-        proxy.deleteBackward()
+        delegate?.deleteBackWard()
     }
     
 }
+
+// MARK: - UICollectionViewDelegate
+
 extension EmojisViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -40,6 +47,7 @@ extension EmojisViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        dataSource.delegate = self.delegate
         return dataSource.collectionView(collectionView, cellForItemAt: indexPath)
     }
     
@@ -48,28 +56,34 @@ extension EmojisViewController: UICollectionViewDataSource, UICollectionViewDele
     }
 }
 
+// MARK: - UICollectionViewCell
 
 class EmojiCell: UICollectionViewCell {
-    @IBOutlet  weak var emojiBtn: UIButton!
     
-    func configure(with emoji: String) {
+    @IBOutlet  weak var emojiBtn: UIButton!
+    var delegate: KeyboardViewControllerDelegate?
+    
+    func configure(with emoji: String, delegate: KeyboardViewControllerDelegate) {
         emojiBtn.setTitle(emoji, for: .normal)
+        self.delegate = delegate
     }
     
     @IBAction func selectEmoji(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.4, animations:{
-            sender.transform = CGAffineTransformScale(.identity, 2.0, 2.0)
+        UIView.animate(withDuration: 0.2, animations:{
+            sender.transform = CGAffineTransformScale(.identity, 2.5, 2.5)
         }){_ in
             sender.transform = CGAffineTransformScale(.identity, 1.0, 1.0)
         }
-        print(sender.title(for: .normal))
+        delegate?.insertText(text: sender.title(for: .normal) ?? "")
     }
     
 }
 
+// MARK: - EmojiDataSource
 
 class EmojiDataSource: NSObject, UICollectionViewDataSource {
     var emojis: [String] = []
+    var delegate: KeyboardViewControllerDelegate?
     
     func getAllEmojis() -> [String] {
         var emojis: [String] = []
@@ -94,13 +108,9 @@ class EmojiDataSource: NSObject, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmojiCell", for: indexPath) as! EmojiCell
         let emoji = emojis[indexPath.item]
-        cell.configure(with: emoji)
-        cell.emojiBtn.addTarget(self, action: #selector(emojiTapped), for: .touchUpInside)
+        cell.configure(with: emoji,delegate: self.delegate!)
         return cell
     }
-    
-    @objc private func emojiTapped() {
-        
-    }
+     
 }
 

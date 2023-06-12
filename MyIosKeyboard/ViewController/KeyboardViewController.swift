@@ -22,7 +22,8 @@ class KeyboardViewController: UIInputViewController {
     
     // Variables
     var popUpView: UIView!
-    var selectedButton: UIButton!
+    var selectedButton: UIButton?
+    var buttonX: UIButton?
     var micVc: MicViewController?
     var emojisVc: EmojisViewController?
     var settingsVc: SettingsViewController?
@@ -65,7 +66,7 @@ class KeyboardViewController: UIInputViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         var newFrame = self.view.frame
-        newFrame.size.height = 600
+        newFrame.size.height = 400
         self.view.frame = newFrame
     }
     
@@ -78,11 +79,15 @@ class KeyboardViewController: UIInputViewController {
         super.viewDidLoad()
         fillLetters(mode: shiftMode)
         
-        selectedButton = getButtonByTag(buttons: keyButtons , tag: 10)
+//        selectedButton = getButtonByTag(buttons: keyButtons , tag: 10) // 21
+//        buttonX = getButtonByTag(buttons: keyButtons , tag: 21)
         let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPress(sender:)))
         longGesture.minimumPressDuration = 1.2
-        selectedButton.addGestureRecognizer(longGesture)
-        
+        let longGestureII = UILongPressGestureRecognizer(target: self, action: #selector(longPress(sender:)))
+        longGesture.minimumPressDuration = 1.2
+        getButtonByTag(buttons: keyButtons , tag: 10).addGestureRecognizer(longGesture)
+        getButtonByTag(buttons: keyButtons , tag: 21).addGestureRecognizer(longGestureII)
+
        // Use Bandel Settings
        // NotificationCenter.default.addObserver(self, selector: #selector(defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
        // defaultsChanged()
@@ -135,18 +140,24 @@ class KeyboardViewController: UIInputViewController {
         if longPressGesture.state != UIGestureRecognizer.State.began {
             return
         }
-        let tapLocation = longPressGesture.location(in: self.view)
+        let selectedButton =  getButtonByTag(buttons: keyButtons , tag: (sender as AnyObject).view?.tag ?? 0)
+       // let tapLocation = longPressGesture.location(in: self.view)
+        
+        
+      
+        
         let viewHeight = selectedButton.frame.height + 10
         let viewWidth  = selectedButton.frame.width + 15
                 
         let point = selectedButton.convert(selectedButton.frame.origin, to: self.view)
+        let decal = selectedButton.tag == 21 ? 55.0 : 0.0
 
-        popUpView = UIView(frame: CGRect(x: selectedButton.frame.origin.x , y: point.y - viewHeight + 5 , width: viewWidth , height: viewHeight))
+        popUpView = UIView(frame: CGRect(x: selectedButton.frame.origin.x + decal , y: point.y - viewHeight + 5 , width: viewWidth , height: viewHeight))
         popUpView.backgroundColor = UIColor.white
         popUpView.addShadow(opacity: 0.6)
  
         let btn0: UIButton = UIButton()
-        btn0.setTitle("q", for: .normal)
+        btn0.setTitle(selectedButton.tag == 21 ? "x" : "q", for: .normal)
         btn0.setTitleColor(UIColor.black, for: .normal)
         btn0.frame = popUpView.bounds
         popUpView.addSubview(btn0)
@@ -156,6 +167,7 @@ class KeyboardViewController: UIInputViewController {
 //            btn.alpha = 0.8
 //        }
         self.view.addSubview(popUpView)
+
     }
     
     @objc func buttonAction( sender: UIButton) {

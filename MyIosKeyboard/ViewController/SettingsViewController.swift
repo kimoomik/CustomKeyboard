@@ -92,9 +92,11 @@ class SettingsDataSource: NSObject, UITableViewDataSource {
         return [
             Setting(title: "Activer Mic", key: .mic, description: "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.") ,
             Setting(title: "Activer Emoji's", key: .emojis, description: ""),
-            Setting(title: "Activer Annalytics", key: .analytics, description: "Le Lorem Ipsum est simplement du faux texte employé dans la composition"),
+            
             Setting(title: "Activer Suggestion", key: .suggestion, description: "Le Lorem Ipsum est simplement du faux texte employé dans la composition")
                 ]
+        
+//        Setting(title: "Activer Annalytics", key: .analytics, description: "Le Lorem Ipsum est simplement du faux texte employé dans la composition"),
     }
     
     override init() {
